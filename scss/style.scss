@@ -286,8 +286,10 @@ body > section {
 footer {
     // min-height: 30rem;
     background: rgba(73, 168, 127, 0.9); //rgba(37, 36, 59, .9);
-    padding: 6rem 0;
-    text-align: center;
+    padding: 6rem 0 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     a {
         color: white;
@@ -296,33 +298,32 @@ footer {
         font-weight: 100;
         text-decoration: none;
         position: relative;
-        margin-right: 3rem;
         border-radius: .4rem;
-        padding: .3rem 0 .5rem;
+        padding: .3rem 0 .1rem;
+        border-bottom: .2rem solid transparent;
+        // border-top: .2rem solid transparent;
 
         &:hover {
-            border-bottom: .2rem solid rgba(255,255,255,.7);
-            border-top: .2rem solid rgba(255,255,255,.7);
+            border-color: rgba(255,255,255,.7);
         }
+    }
 
-        &:after {
+    a + a {
+        margin-left: 3.8rem;
+        &:before {
             content: '\2022';
             position: absolute;
-            right: -2.8rem;
+            left: -2.8rem;
             color: rgba(255,255,255,.7);
-        }
-
-        &:last-child:after {
-            content: none;
-            margin-right: 0;
         }
     }
 
     @media screen and (max-width: 920px) {
+        flex-direction: column;
         padding: 4rem 0 2.5rem;
-        a { display: block; margin: 0 0 1rem; }
-        a:hover { border: none; }
-        a:after { display: none; }
+        a { display: block; margin: 0 0 1rem; border: none; }
+        a+a { margin-left: 0; }
+        a+a:before { display: none; }
     }
 }
 
