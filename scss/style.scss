@@ -41,9 +41,9 @@ body {
             display: inline-block;
             font-weight: 100;
             font-size: 14.0rem;
-            line-height: 16.8rem;
-            border: 0.3rem solid white;
-            padding: 0 3.1rem 1.1rem;
+            line-height: 0.8em;
+            border: 0.03em solid white;
+            padding: .37em .3em .3em;
         }
 
         p {
@@ -56,7 +56,13 @@ body {
         @media screen and (max-width: 920px) {
             h1 {
                 font-size: 7rem;
-                line-height: 8.4rem;
+                margin: 0 2rem;
+            }
+        }
+
+        @media screen and (max-width: 430px) {
+            h1 {
+                font-size: 5rem;
                 margin: 0 2rem;
             }
         }
